@@ -115,9 +115,17 @@
     // ❗ Notes:
     // 🧠 This could be solved by using filter to make an array of odd integers, and then using forEach to add them up.
     // 🧠 Or you could opt for solving everything with a single forEach which is the recommended approach (saves a loop).
-    const sumOddInts = () => {
-
-    }
+    const sumOddInts = (integers) => {
+      let sumOfOdds = 0;
+      const odds = [];
+      integers.forEach(integer => {
+        if (integer % 2) {
+          odds.push(integer);
+          sumOfOdds += integer;
+        };
+      });
+      return [sumOfOdds, odds];
+    };
 
     // 👉 CHALLENGE 8
     // 🧠 The function checkInts takes any number of arguments, but each argument is an integer.
@@ -130,7 +138,7 @@
     // checkInts(2, 6) // should return ["even", "even"]
     // ❗ Notes:
     // 🧠 Solve this problem using rest parameters and map.
-    const checkInts = () => {
+    const checkInts = (...integers) => {
 
     }
 
