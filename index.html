@@ -44,7 +44,7 @@
     // 🧠 Solve this challenge using a for/in loop or a for loop.
     const processLearnersLoop = (learners) => {
       for (let idx in learners) {
-        let learner = learners[idx];
+        const learner = learners[idx];
         learner.lovesJS ? learner.lovesJS = true : learner.lovesJS = false; 
       };
       return learners;
@@ -69,8 +69,12 @@
     // ❗ Notes:
     // 🧠 Solve this challenge using the map method of the learners array.
     // 🧠 Use arrow functions.
-    const processLearnerMap = () => {
-
+    const processLearnerMap = (learners) => {
+      const newArr = learners.map(learner => {
+        learner.lovesJS ? learner.lovesJS = true : learner.lovesJS = false;
+        return learner;
+      })
+      return newArr;
     }
 
     // 👉 CHALLENGE 5
@@ -81,7 +85,7 @@
     // ❗ Notes:
     // 🧠 Solve this challenge using the forEach method of the learners array.
     // 🧠 You will need to declare a result array into which you push learners from inside your forEach loop.
-    const getJavaScriptLoversForEach = () => {
+    const getJavaScriptLoversForEach = (learners) => {
 
     }
 
