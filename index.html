@@ -139,8 +139,11 @@
     // ❗ Notes:
     // 🧠 Solve this problem using rest parameters and map.
     const checkInts = (...integers) => {
-
-    }
+      const strings = integers.map(integer => {
+        return integer % 2 ? 'odd' : 'even';
+      });
+      return strings.length ? strings : 'pass some arguments, yo!';
+    };
 
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
